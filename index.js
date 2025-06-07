@@ -3,10 +3,10 @@
 const app = require('./app');
 const mongoose = require('mongoose');
 const http = require('http');
+const server = http.createServer(app);
 const { Server } = require('socket.io');
 require('dotenv').config();
 
-const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
         origin: '*',
