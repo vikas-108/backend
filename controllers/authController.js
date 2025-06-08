@@ -103,7 +103,7 @@ await user.save();
       { upsert: true, new: true }
     );
 
-    // TODO: integrate SMS sending service here
+    // integrate SMS sending service here
     if (process.env.NODE_ENV !== 'production') {
     console.log(`OTP for ${phone}: ${otp}`);
     }
